@@ -1,2 +1,2 @@
 # Vrinda
-A plant disease detection website
+A web application for plant disease detection
