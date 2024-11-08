@@ -26,11 +26,11 @@ instantly diagnose, connect with the community, and get weather-based alerts</p
 ## Features
 <div>
  <ul>
-<ol> Users can upload their plant's image and our application will tell them the exact disease their plant is suffering from.</ol>
-<ol> Our application offers a plant-related community where users can share and ask their queries related to plants.</ol>
-<ol> Users can use our fertilizer calculator to estimate the required amount of fertilizer.</ol>
-<ol> Our web app can provide weather details of a particular location and give precautions for optimal plant growth depending on the weather.</ol>
-<ol> Unlike other apps our app not only provides disease detection but also provides a one-stop solution for farmers, gardeners or plant enthusiasts. </li>
+<li> Users can upload their plant's image and our application will tell them the exact disease their plant is suffering from.</li>
+<li> Our application offers a plant-related community where users can share and ask their queries related to plants.</li>
+<li> Users can use our fertilizer calculator to estimate the required amount of fertilizer.</li>
+<li> Our web app can provide weather details of a particular location and give precautions for optimal plant growth depending on the weather.</li>
+<li> Unlike other apps our app not only provides disease detection but also provides a one-stop solution for farmers, gardeners or plant enthusiasts. </li>
 </ul>
 
     
