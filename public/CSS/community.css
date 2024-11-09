@@ -165,7 +165,7 @@ body.dark .sidebar header .toggle {
   border: none;
   border-radius: 6px;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 500; 
   background: var(--primary-color-light);
   transition: var(--tran-05);
 }
@@ -446,20 +446,23 @@ body.dark .like-part .like-btn {
   color: var(--text-color);
 }
 
-/* .like-part .like-btn .filled {
+.like-part .like-btn .filled {
   opacity: 0;
   display: none;
-} */
+  transition: var(--tran-05);
+}
 
-/* .like-part.clicked .like-btn .filled {
+.like-part.clicked .like-btn .filled {
   opacity: 1;
   display: inline;
-} */
+  transition: var(--tran-05);
+}
 
-/* .like-part.clicked .like-btn .empty {
+.like-part.clicked .like-btn .empty {
   opacity: 0;
   display: none;
-} */
+  transition: var(--tran-05);
+}
 
 #like-count {
   font-size: 20px;
@@ -557,6 +560,8 @@ body.dark .post-btn {
   border-radius: 6px;
   border: 1px solid rgb(224, 223, 223);
   margin-top: 0.6rem;
+  outline: none;
+
 }
 
 .form-field textarea {
@@ -564,6 +569,7 @@ body.dark .post-btn {
   border: 1px solid rgb(224, 223, 223);
   margin-top: 0.6rem;
   padding: 0.5rem 1rem;
+  outline: none;
 }
 .form-field .image-div {
   border: none;
@@ -605,8 +611,47 @@ body.dark .post-btn {
     background-color: red;
 } */
 
+.lable-text{
+  font-size: 15px; margin-left: 5px;
+}
+
 .new-upload-img {
   width: 80px;
   margin: 0.5rem 1rem;
   margin-bottom: 0;
+}
+
+body.dark .form-field label{
+  color: var(--text-color);
+}
+
+body.dark .form-field input,
+body.dark .form-field textarea {
+  background: var(--primary-color-light);
+  border: none;
+  color: var(--toggle-color);
+  outline: none;
+}
+
+body.dark .add-btn {
+  color: var(--toggle-color);
+  border: 1px solid rgb(137, 137, 137);
+  background: none;
+}
+
+body.dark .add-btn:hover {
+  background: var(--primary-color);
+  border: none;
+}
+
+body.dark .label-text{
+  color: var(--text-color);
+}
+
+.comImg{
+  position: fixed;
+  /* z-index: ; */
+ width: 6rem;
+  bottom: 0;
+  margin: 1rem;
 }

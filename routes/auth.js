@@ -15,7 +15,7 @@ router.post(
   "/signup",
   [
     passport.authenticate("local.signup", {
-      successRedirect: "/community",
+      successRedirect: "/",
       failureRedirect: "/signup",
       failureFlash: true,
     }),

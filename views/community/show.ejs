@@ -10,7 +10,7 @@
         <i class="fa-solid fa-circle-plus" style="margin-left: 2rem"></i>
       </div>
     </a> 
-  </div>
+  </div> 
 
   <div class="card">
     <div class="user-details">
@@ -33,8 +33,9 @@
         </div>
         <div class="react-btns">
           <div class="like-part">
-            <button id="like-btn" class="like-btn" onclick="toggleLike()">
+            <button id="like-btn" class="like-btn">
               <i class='bx bx-like empty'></i>
+              <i class='bx bxs-like filled'></i>
             </button>
             <span id="like-count" ><%= post.likes %></span>
           </div>
@@ -43,11 +44,13 @@
             action="/community/<%=post.id%>?_method=DELETE"
             class="like-part"
           >
+            <% if(currentUser && currentUser._id.equals(post.owner._id)){ %>
             <button
             class="delete-btn"
             >
               <i class="fa-solid fa-trash-can fa-xl"></i>
             </button>
+              <%}%>
           </form>
         </div>
       </div>
@@ -92,16 +95,15 @@
 </section>
 
 <script>
-  function toggleLike() {
-    console.log("clicked");
-    
-  const likeBtn = document.getElementById("like-btn");
-  if (likeBtn.innerHTML.includes("bx-like empty")) {
-    likeBtn.innerHTML = "<i class='bx bxs-like filled'></i>";
-  } else {
-    likeBtn.innerHTML = "<i class='bx bx-like empty'></i>";
-  }
-}
+
+
+  const likeBtn = body.querySelector(".like-btn");
+  const linePart = body.querySelector(".like-part ");
+  
+
+likeBtn.addEventListener("click", () => {
+  linePart.classList.toggle("clicked");
+});
 
   document.getElementById("like-btn").addEventListener("click", async () => {
     const userId = "<%=currentUser._id%>"; // You should replace this with the real logged-in user ID

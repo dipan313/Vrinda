@@ -165,7 +165,7 @@ body {
   align-items: center;
   color: #2c6455;
   text-decoration: none;
-  padding: 5rem;
+  padding: 2rem;
 }
 
 .container {
@@ -191,6 +191,7 @@ body {
 
 .goto-login a {
   text-decoration: none;
+  margin-bottom: 1rem;
 }
 
 .container-right {
@@ -238,6 +239,7 @@ body {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 12px;
+  outline: none;
 }
 
 .form-password {
@@ -264,3 +266,4 @@ body {
 
 
 
+ 

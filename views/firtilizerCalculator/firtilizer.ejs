@@ -21,24 +21,24 @@
   <form id="fertilizerForm">
     <div class="each-col">
       <label>Plant:</label>
-      <input type="text" name="plant" required />
+      <input type="text" name="plant" placeholder="Eg. tomato" required />
 
       <label>Growth Stage:</label>
-      <input type="text" name="growthStage" required />
+      <input type="text" name="growthStage" placeholder="Eg. flowering" required />
 
       <label>If plant has any Disease:</label>
-      <input type="text" name="disease" />
+      <input type="text" name="disease" placeholder="Eg. rust" />
     </div>
     <div class="each-col" style="margin-left: 4rem">
       <p class="soil-data">If you have Soil Data</p>
       <label>Nitrogen(N):</label>
-      <input type="number" name="soilN" />
+      <input type="number" name="soilN" placeholder="Eg. 20"/>
 
       <label>Phosphorus(P):</label>
-      <input type="number" name="soilP" />
+      <input type="number" name="soilP" placeholder="Eg. 6"/>
 
       <label>Potassium(K):</label>
-      <input type="number" name="soilK" />
+      <input type="number" name="soilK" placeholder="Eg. 10"/>
     </div>
     <button type="submit" class="recommenBtn">Get Recommendation</button>
   </form>

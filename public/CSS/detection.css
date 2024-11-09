@@ -167,104 +167,155 @@ body.dark {
   box-shadow: 0px 4px 8px rgba(1, 118, 220, 0.48);
 }
 
-
 /* Fertillizer Page */
 
-#fertilizerForm{
+#fertilizerForm {
   display: flex;
   width: 45%;
   margin: 4rem 6rem;
   justify-content: space-evenly;
 }
 
-#fertilizerForm .each-col{
+#fertilizerForm .each-col {
   display: flex;
   flex-direction: column;
 }
 
-#fertilizerForm input{
- padding: 0.5rem 1rem;
+#fertilizerForm input {
+  padding: 0.6rem 1rem;
   border-radius: 6px;
-  border: 1px solid rgb(224, 223, 223);
-  margin-top: 0.6rem;
+  margin-top: 0.8rem;
   width: 15rem;
+  outline: none;
+  border: 1px solid rgb(224, 223, 223);
   margin-bottom: 1rem;
+  color: var(--text-color);
+  background: var(--primary-color-light);
 }
 
-#fertilizerForm label{
- font-size: 15px;
- margin-bottom: -.4rem;
- margin-left: .4rem;
-  font-family: 'Montserrat', sans-serif;
+#fertilizerForm label {
+  font-size: 15px;
+  margin-bottom: -0.4rem;
+  margin-left: 0.4rem;
+  font-family: "Montserrat", sans-serif;
 }
 
-#fertilizerForm .recommenBtn{
+#fertilizerForm .recommenBtn {
   position: absolute;
   width: 15rem;
   bottom: 40%;
   /* margin-left: 2rem; */
-  padding: .8rem 0;
+  padding: 0.8rem 0;
   border-radius: 16px;
   border: none;
   background-color: teal;
   color: #fff;
 }
 
-.soil-data{
+.soil-data {
   font-size: 16px;
-  color: teal;
+  color: var(--primary-color);
   font-weight: 600;
   margin-left: 1.8rem;
   position: absolute;
   top: 15%;
 }
 
-#result-div{
+#result-div {
   margin-top: 5rem;
   /* border: 1px solid black; */
   margin: 6rem 8rem;
   font-size: 24px;
-  color: teal;
+  color: var(--primary-color);
   display: flex;
-} 
-
-#result-div span{
-  margin-right: 2rem;
-  font-family: 'Open Sans', sans-serif;
 }
 
+#result-div span {
+  margin-right: 2rem;
+  font-family: "Open Sans", sans-serif;
+}
 
+body.dark #result-div {
+  color: var(--text-color);
+}
+
+body.dark #fertilizerForm label {
+  color: var(--text-color);
+} 
+
+body.dark #fertilizerForm input {
+  background: var(--primary-color-light);
+  border: none;
+  color: var(--toggle-color);
+  outline: none;
+}
+
+body.dark #fertilizerForm .recommenBtn {
+  color: var(--toggle-color);
+  border: 1px solid var(--primary-color);
+  background: none;
+}
+
+body.dark #fertilizerForm .recommenBtn:hover {
+  background: var(--primary-color);
+}
+
+body.dark .soil-data {
+  color: var(--toggle-color);
+}
 /* Weather Page */
 
-.heading-weather{
+.heading-weather {
   color: var(--primary-color);
-  margin:1rem 5rem;
-  font-family: 'Roboto', sans-serif;
+  margin: 1rem 5rem;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 20px;
+}
+
+body.dark .heading-weather {
+  color: var(--text-color);
+}
+
+.fertilize-img {
+  position: fixed;
+  transform: rotate(180deg);
+  height: 100%;
+  right: 0;
+}
+
+.pooted-tree{
+  position: fixed;
+ width: 6rem;
+  bottom: 0;
+  margin: 1rem;
 }
 
 .weather-form {
   /* border: 1px solid black; */
   max-width: 60rem;
   margin-left: 5rem;
-
 }
 
-.weather-form input{
+.weather-form input {
   outline: none;
-    border: 1px solid rgb(224, 223, 223);
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: 500;
-  padding: .5rem 1rem;
+  border: 1px solid rgb(224, 223, 223);
+  padding: 0.6rem 1rem;
   border-radius: 6px;
   background: var(--primary-color-light);
   transition: var(--tran-05);
+  color: var(--text-color);
 }
 
-.weather-form button{
-  padding: .6rem 2rem;
+body.dark .weather-form input {
+  background: var(--primary-color-light);
+  border: none;
+  color: var(--toggle-color);
+  outline: none;
+}
+
+.weather-form button {
+  padding: 0.6rem 2rem;
   border-radius: 10px;
   border: none;
   background-color: var(--primary-color);
@@ -272,28 +323,45 @@ body.dark {
   margin-left: 1.5rem;
 }
 
+body.dark .weather-form button {
+  color: var(--toggle-color);
+  border: 1px solid var(--primary-color);
+  background: none;
+}
 
-#OutPut-data{
+body.dark .weather-form button:hover {
+  background: var(--primary-color);
+}
+
+#OutPut-data {
   display: flex;
   flex-direction: column;
   margin: 2rem 5rem;
 }
 
-#OutPut-data div{
+#OutPut-data div {
   margin-top: 1rem;
 }
 
-#OutPut-data p{
+#OutPut-data p {
   font-size: 20px;
   color: var(--primary-color);
   /* font-family: 'Roboto', sans-serif; */
 }
 
-#OutPut-data ul{
-  margin-top: .5rem;
+#OutPut-data ul {
+  margin-top: 0.5rem;
   margin-left: 1rem;
-
 }
-#OutPut-data ul li{
-  margin: .6rem .5rem;
+#OutPut-data ul li {
+  margin: 0.6rem 0.5rem;
+}
+
+body.dark #OutPut-data {
+  color: var(--text-color);
+}
+
+body.dark #OutPut-data p {
+  color: var(--text-color);
+  /* font-family: 'Roboto', sans-serif; */
 }

@@ -45,7 +45,7 @@ router.post("/",isLoggedIn, upload.single("post[image]"), async (req, res) => {
 router.get("/:id", async (req, res) => {
   let { id } = req.params;
   const post = await Post.findById(id)
-    .populate("owner")
+    .populate("owner") 
     .populate({
       path: "comments",
       populate: {
