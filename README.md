@@ -2,7 +2,7 @@
 
 ## Introduction
 <div>
-<p>Empowering farmers, gardeners and plant enthusiasts to detect and prevent plant diseases
+<p>Empowering farmers, gardeners and plant enthusiasts to detect and prevent plant diseases.
 instantly diagnose, connect with the community, and get weather-based alerts</p></div>
 
 
@@ -23,7 +23,7 @@ instantly diagnose, connect with the community, and get weather-based alerts</p
 </ul>
 </div>
 
-## Features
+## Features:
 <div>
  <ul>
 <li> Users can upload their plant's image and our application will tell them the exact disease their plant is suffering from.</li>
