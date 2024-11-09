@@ -241,7 +241,7 @@ body.dark #result-div {
 
 body.dark #fertilizerForm label {
   color: var(--text-color);
-} 
+}
 
 body.dark #fertilizerForm input {
   background: var(--primary-color-light);
@@ -284,9 +284,9 @@ body.dark .heading-weather {
   right: 0;
 }
 
-.pooted-tree{
+.pooted-tree {
   position: fixed;
- width: 6rem;
+  width: 6rem;
   bottom: 0;
   margin: 1rem;
 }
@@ -336,7 +336,14 @@ body.dark .weather-form button:hover {
 #OutPut-data {
   display: flex;
   flex-direction: column;
-  margin: 2rem 5rem;
+  padding: 1rem;
+  border: 1px dashed var(--primary-color);
+  border-radius: 8px;
+  background-color: var(--primary-color-light);
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 2rem 15rem;
 }
 
 #OutPut-data div {
@@ -366,7 +373,7 @@ body.dark #OutPut-data p {
   /* font-family: 'Roboto', sans-serif; */
 }
 
-#user-input{
+#user-input {
   /* width: 50rem; */
   display: flex;
   justify-content: center;
@@ -374,7 +381,7 @@ body.dark #OutPut-data p {
   margin: 1rem 15rem;
 }
 
-#user-input input{
+#user-input input {
   outline: none;
   border: 1px solid rgb(224, 223, 223);
   padding: 1rem;
@@ -385,8 +392,8 @@ body.dark #OutPut-data p {
   color: var(--text-color);
 }
 
-#user-input button{
-   padding: 0.6rem 2rem;
+#user-input button {
+  padding: 0.6rem 2rem;
   border-radius: 10px;
   border: none;
   background-color: var(--primary-color);
@@ -394,6 +401,6 @@ body.dark #OutPut-data p {
   margin-left: 1.5rem;
 }
 
-.outputdiv{
+.outputdiv {
   margin: 1rem 20rem;
 }

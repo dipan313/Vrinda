@@ -111,10 +111,30 @@ app.get("/gemini", (req, res) => {
 
 app.post("/gemini", async (req, res) => {
 
+  const si = `
+You are an expert in plants and crops.
+
+Your response must be a HTML.
+
+Example :
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+`;
+
   const prompt = req.body.text;
 
-  const result = await model.generateContent(prompt);
-  
+  const result = await model.generateContent(si + prompt);
+
   res.send(result.response.text());
 });
 

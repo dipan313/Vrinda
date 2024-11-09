@@ -1,54 +1,68 @@
 <% layout("/layouts/boilerplate") %>
 
-<section class="home">
-  <!-- <img class="fertilize-img" src="images/rightimg.png"> -->
+  <style>
+    #OutPut-data {
+      padding: 1rem;
+      border: 1px dashed var(--primary-color);
+      border-radius: 8px;
+      background-color: var(--primary-color-light);
+      color: var(--primary-color);
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin: 2rem 15rem;
+    }
+  </style>
 
-  <div class="community-head">
-    <div class="text">Chatbot</div>
-  </div>
-  
+  <section class="home">
+    <!-- <img class="fertilize-img" src="images/rightimg.png"> -->
 
-  <h3 style="margin: 1rem 15rem; color: teal;">Ask anything about plant</h3>
-  <form id="user-input" name="text" action="/gemini" method="POST">
-    <input name="text" placeholder="Type here.." />
-    <button type="submit">Ask</button>
-  </form>
-  
-  <div id="OutPut-data">
-  </div>
-  <!-- <img class="pooted-tree" src="images/potted-tree.png"> -->
+    <div class="community-head">
+      <div class="text">Chatbot</div>
+    </div>
 
-</section>
 
-<script>
-  document
-    .getElementById("user-input")
-    .addEventListener("submit", async function (e) {
-      e.preventDefault();
-      const userInput = this.text.value;
-      console.log(userInput);
-      
-      try {
-        const response = await fetch("/gemini", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ text:userInput }),
-        });
+    <h3 style="margin: 1rem 15rem; color: teal;">Ask anything about plant</h3>
+    <form id="user-input" name="text" action="/gemini" method="POST">
+      <input name="text" placeholder="Type here.." />
+      <button type="submit">Ask</button>
+    </form>
 
-        if (!response.ok) {
-          document.getElementById("OutPut-data").innerText =
-            "Error: " + response.statusText;
-          return;
+    <div id="OutPut-data">
+    </div>
+    <!-- <img class="pooted-tree" src="images/potted-tree.png"> -->
+
+  </section>
+
+  <script>
+    document
+      .getElementById("user-input")
+      .addEventListener("submit", async function (e) {
+        e.preventDefault();
+        const userInput = this.text.value;
+        console.log(userInput);
+
+        try {
+          const response = await fetch("/gemini", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ text: userInput }),
+          });
+
+          if (!response.ok) {
+            document.getElementById("OutPut-data").innerText =
+              "Error: " + response.statusText;
+            return;
+          }
+
+          const result = await response.text();
+          console.log(result);
+
+          // Display chatbot response with custom styling
+          document.getElementById("OutPut-data").innerHTML = result;
+        } catch (error) {
+          console.error("Error:", error);
+          document.getElementById("OutPut-data").innerHTML =
+            "An error occurred while fetching data.";
         }
-
-        const result = await response.text();
-      console.log(result);
-
-      document.getElementById("OutPut-data").innerText = result;
-      } catch (error) {
-        console.error("Error:", error);
-        document.getElementById("OutPut-data").innerText =
-          "An error occurred while fetching weather data.";
-      }
-    });
-</script>
+      });
+  </script>
