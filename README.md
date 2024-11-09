@@ -36,3 +36,25 @@ instantly diagnose, connect with the community, and get weather-based alerts</p
     
 Feel free to explore, contribute, or use this as a reference for your own projects!
 </div>
+
+## Data base 
+### User Schema:
+<p>username (String)</p>
+<p>email (String)</p>
+<p>password (String)</p>
+<p>createdAt (Date)</p>
+
+### Post Schema:
+<p>title (String)</p>
+<p>image(String)</p>
+<p>owner(ObjectId - a reference to the user schema)</p>
+<p>comments(ObjectId - a reference to the Comment schema)</p>
+<p>likes(Number)</p>
+<p>usersLiked((ObjectId - a reference to the user schema))</p>
+<p>createdAt (Date)</p>
+
+### Comment Schema: 
+<p>commentText(String)</p> 
+<p>owner(ObjectId - a reference to the user schema) </p>
+<p>createdAt (Date)</p>
+
