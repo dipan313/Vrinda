@@ -102,31 +102,22 @@ app.get("/detect", (req, res) => {
 
 
 
-// const { GoogleGenerativeAI } = require("@google/generative-ai");
-// const genAI = new GoogleGenerativeAI(process.env.GEMINI_KEY);
-// const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-// app.get("/gemini", async (req, res) => {
+const { GoogleGenerativeAI } = require("@google/generative-ai");
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_KEY);
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+app.get("/gemini", (req, res) => {
+  res.render("chatbot/chatbot.ejs");
+});
 
-//   let city = 'Kolkata';
-//   let corps = 'Banana';
+app.post("/gemini", async (req, res) => {
 
-//   let response = await fetch(
-//     `${process.env.API_URL}?q=${city}&appid=${process.env.API_KEY}&units=metric`
-//   );
-//   let jsonRes = await response.json();
-//   let resObject = {
-//     city: city,
-//     temp: jsonRes.main.temp,
-//     humidity: jsonRes.main.humidity,
-//     weather: jsonRes.weather[0].description,
-//   };
+  const prompt = req.body.text;
 
-//   const prompt = `Check if ${city}'s weather, with Temperature: ${resObject.temp}°C, Humidity: ${resObject.humidity}% is suitable for ${corps} or not.
-//     `;
-//   const result = await model.generateContent(prompt);
-//   res.send(result.response.text());
+  const result = await model.generateContent(prompt);
+  
+  res.send(result.response.text());
+});
 
-// });
 
 
 

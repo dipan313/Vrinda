@@ -365,3 +365,35 @@ body.dark #OutPut-data p {
   color: var(--text-color);
   /* font-family: 'Roboto', sans-serif; */
 }
+
+#user-input{
+  /* width: 50rem; */
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid black; */
+  margin: 1rem 15rem;
+}
+
+#user-input input{
+  outline: none;
+  border: 1px solid rgb(224, 223, 223);
+  padding: 1rem;
+  border-radius: 6px;
+  width: 100%;
+  background: var(--primary-color-light);
+  transition: var(--tran-05);
+  color: var(--text-color);
+}
+
+#user-input button{
+   padding: 0.6rem 2rem;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  margin-left: 1.5rem;
+}
+
+.outputdiv{
+  margin: 1rem 20rem;
+}
