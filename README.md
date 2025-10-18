@@ -7,7 +7,6 @@ instantly diagnose, connect with the community, and get weather-based alerts</p
 
 
 ## Technology
-
 <div>
 <p>The website is built with:</p>
   
